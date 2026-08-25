@@ -1,16 +1,22 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Clicker Counter</title>
 </head>
-<body style="backround-color: red;">
+<body style="background-color: red;">
 <center>
 <h1>Count: <span id="numberDisplay">0</span></h1>
-<button id="countbutton">Add 1</button>
+<button id="countButton">Add 1</button>
 </center>
 <script>
 let count = 0;
-const display = document.getElementById("numberDisplay);
-const display = document.getElementById("countButton);
+const display = document.getElementById("numberDisplay");
+const button = document.getElementById("countButton");
+
+button.addEventListener("click", function() {
+  count++;
+  display.textContent = count;
+});
+</script>
 </body>
 </html>
