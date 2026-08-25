@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+</head>
+<body>
+
+    <!-- 1. The display where the number lives -->
+    <h1>Count: <span id="numberDisplay">0</span></h1>
+
+    <!-- 2. The button you click -->
+    <button id="countButton">Add 1</button>
+
+    <!-- 3. The JavaScript that does the work -->
+    <script>
+        // Track the current number in a variable
+        let count = 0;
+
+        // Get references to the HTML elements
+        const display = document.getElementById("numberDisplay");
+        const button = document.getElementById("countButton");
+
+        // Listen for clicks on the button
+        button.addEventListener("click", function() {
+            count++;                 // Add 1 to the number
+            display.innerText = count; // Update the screen with the new number
+        });
+    </script>
+
+</body>
+</html>
